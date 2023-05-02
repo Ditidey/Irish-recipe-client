@@ -25,7 +25,7 @@ const ChefsSection = () => {
                             <p>Year of experiences: {chef.years_experience}</p>
                             <p>Total Recipes: {chef.num_recipes}</p>
                             <p>Likes: {chef.likes} <span>Ratings: {chef.rating}</span></p>
-                            <Link>  <button className='bg-orange-300 p-2 mt-4 rounded-lg hover:bg-orange-600'>View Recipes Details</button>
+                            <Link to={`/chefs/${chef.id}`}>  <button className='bg-orange-300 p-2 mt-4 rounded-lg hover:bg-orange-600'>View Recipes Details</button>
                             </Link>
                         </div>
                     </div>)
