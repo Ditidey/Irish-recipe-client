@@ -6,7 +6,8 @@ import { contextProvider } from '../AuthProvider';
 const NavBar = () => {
     const [open, setOpen] = useState(false)
     const {user, logoutUser} = useContext(contextProvider)
-
+     
+    console.log(user)
     const handleLogout =()=>{
         logoutUser()
         .then()
@@ -29,15 +30,16 @@ const NavBar = () => {
                     <p> <NavLink to='/blog' className={({ isActive }) => isActive ? 'text-red-800 font-bold' : ''}>Blog</NavLink></p>
                     {
                         user ? <> 
-                            <Tooltip content='diti'> 
-                            <FaUserCircle className='inline-flex h-8 w-8 space-x-2' ></FaUserCircle>
+                            <Tooltip content={user?.displayName}> 
+                            {user?.photoURL ? <img src={user.photoURL} className='w-8 h-8 rounded-full'></img>
+                             : <FaUserCircle className='inline-flex h-8 w-8 space-x-2' ></FaUserCircle>
+                             } 
                             </Tooltip>
-                        
                             <NavLink className={({ isActive }) => isActive ? 'text-red-800 font-bold' : ''}>
-                                <button onClick={handleLogout} className='border-spacing-1 shadow-md p-2 rounded-md hover:bg-slate-400'>Logout</button></NavLink>
+                                <button onClick={handleLogout} className='border-spacing-1 shadow-md px-2 py-1 rounded-md hover:bg-slate-400'>Logout</button></NavLink>
                                 </> :
                             <><NavLink to='/login' className={({ isActive }) => isActive ? 'text-red-800 font-bold' : ''}>
-                                <button className='border-spacing-1 shadow-md p-2 rounded-md hover:bg-slate-400'>Login</button></NavLink>
+                                <button className='border-spacing-1 shadow-md px-2 py-1 rounded-md hover:bg-slate-400'>Login</button></NavLink>
                             </>
                     }
                 </div>

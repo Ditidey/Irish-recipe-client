@@ -5,7 +5,7 @@ import { contextProvider } from '../../AuthProvider';
 
 const Register = () => {
     const [error, setError] = useState('');
-    const { registerUser, loginWithGit } = useContext(contextProvider);
+    const { registerUser, loginWithGit, loginWithGoogle } = useContext(contextProvider);
     const [success, setSuccess] = useState('');
 
     const handleRegister = (event) => {
@@ -40,8 +40,23 @@ const Register = () => {
                 setSuccess('Login successful with Github!')
             })
             .catch(error => {
+                setSuccess('')
                 setError(error.message)
             })
+    }
+
+    const handleGoogle = ()=>{
+        loginWithGoogle()
+        .then(result =>{
+            const googleUser = result.user;
+            console.log(googleUser)
+            setError('')
+            setSuccess('Login with Google Successful')
+        })
+        .catch(error => {
+            setSuccess('')
+            setError(error.message)
+        })
     }
     return (
         <div className='my-10'>
@@ -67,9 +82,9 @@ const Register = () => {
                         <input type="password" name="password" id="password" className='border p-2' required />
                     </div>
                     <input type="submit" value="Register" className='border bg-green-300 hover:bg-green-700 p-2 rounded-lg w-52 mt-1' /> <br />
-                </form>
+                </form> <br />
 
-                <button className='bg-blue-400 p-2 w-52 inline-flex mt-3'>
+                <button onClick={handleGoogle} className='bg-blue-400 p-2 w-52 inline-flex mt-3'>
                     <FaGoogle className='text-green-300  h-5 w-5 p-1 mt-1 me-1 bg-white'></FaGoogle>
                     Login with Google
                 </button> <br />
