@@ -1,10 +1,17 @@
 import { Tooltip } from '@material-tailwind/react';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaBars, FaClosedCaptioning, FaGlassCheers, FaGlassWhiskey, FaTimes, FaUserCircle } from "react-icons/fa";
 import { Link, NavLink } from 'react-router-dom';
+import { contextProvider } from '../AuthProvider';
 const NavBar = () => {
     const [open, setOpen] = useState(false)
-    const user = null;
+    const {user, logoutUser} = useContext(contextProvider)
+
+    const handleLogout =()=>{
+        logoutUser()
+        .then()
+        .catch()
+    }
     return (
         <>
             <nav className='flex justify-between mx-20'>
@@ -27,7 +34,7 @@ const NavBar = () => {
                             </Tooltip>
                         
                             <NavLink className={({ isActive }) => isActive ? 'text-red-800 font-bold' : ''}>
-                                <button className='border-spacing-1 shadow-md p-2 rounded-md hover:bg-slate-400'>Logout</button></NavLink>
+                                <button onClick={handleLogout} className='border-spacing-1 shadow-md p-2 rounded-md hover:bg-slate-400'>Logout</button></NavLink>
                                 </> :
                             <><NavLink to='/login' className={({ isActive }) => isActive ? 'text-red-800 font-bold' : ''}>
                                 <button className='border-spacing-1 shadow-md p-2 rounded-md hover:bg-slate-400'>Login</button></NavLink>
