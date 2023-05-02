@@ -5,7 +5,7 @@ import { contextProvider } from '../../AuthProvider';
 
 const Login = () => {
     const [error, setError] = useState('');
-    const {loginUser} = useContext(contextProvider);
+    const {loginUser, loginWithGit} = useContext(contextProvider);
     const [success, setSuccess] = useState('');
 
     const handleLogin = (event) =>{
@@ -15,7 +15,7 @@ const Login = () => {
         const password = form.password.value;
          setSuccess('')
          setError('')
-         
+
         loginUser(email, password)
         .then(result =>{
             const loggedUser = result.user;
@@ -27,6 +27,19 @@ const Login = () => {
             setError(error.message)
         })
 
+    }
+
+    const handleGithub = () => {
+        loginWithGit()
+            .then(result => {
+                const gitUser = result.user
+                console.log(gitUser)
+                setError('')
+                setSuccess('Login successful with Github!')
+            })
+            .catch(error => {
+                setError(error.message)
+            })
     }
     return (
         <div className='my-10'>
@@ -48,7 +61,7 @@ const Login = () => {
                 <FaGoogle className='text-green-300  h-5 p-1 w-4 mt-1 me-1 bg-white'></FaGoogle>
                 Login with Google
             </button> <br />
-            <button className=' p-2 w-52 inline-flex mt-3 border-spacing-2 border-black bg-slate-300'>
+            <button onClick={handleGithub} className=' p-2 w-52 inline-flex mt-3 border-spacing-2 border-black bg-slate-300'>
                 <FaGithub className='text-black p-1 h-5 w-5 font-bold mt-1 me-1'></FaGithub>
                 Login with GitHub
             </button> <br />

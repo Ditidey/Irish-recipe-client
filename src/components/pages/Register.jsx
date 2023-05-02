@@ -5,7 +5,8 @@ import { contextProvider } from '../../AuthProvider';
 
 const Register = () => {
     const [error, setError] = useState('');
-    const { registerUser } = useContext(contextProvider);
+    const { registerUser, loginWithGit } = useContext(contextProvider);
+    const [success, setSuccess] = useState('');
 
     const handleRegister = (event) => {
         event.preventDefault();
@@ -29,12 +30,25 @@ const Register = () => {
             })
 
     }
+
+    const handleGithub = () => {
+        loginWithGit()
+            .then(result => {
+                const gitUser = result.user
+                console.log(gitUser)
+                setError('')
+                setSuccess('Login successful with Github!')
+            })
+            .catch(error => {
+                setError(error.message)
+            })
+    }
     return (
         <div className='my-10'>
             <div className='w-2/5 shadow-2xl mx-auto p-10 ps-40 space-y-3 bg-orange-50'>
                 <p className='text-2xl font-bold'>Register with</p>
                 <p className='text-red-500'>{error}</p>
-
+                <p className='text-green-500'>{success}</p>
                 <form onSubmit={handleRegister}  >
                     <div>
                         <label htmlFor="name">Name</label> <br />
@@ -54,12 +68,12 @@ const Register = () => {
                     </div>
                     <input type="submit" value="Register" className='border bg-green-300 hover:bg-green-700 p-2 rounded-lg w-52 mt-1' /> <br />
                 </form>
-                
+
                 <button className='bg-blue-400 p-2 w-52 inline-flex mt-3'>
                     <FaGoogle className='text-green-300  h-5 w-5 p-1 mt-1 me-1 bg-white'></FaGoogle>
                     Login with Google
                 </button> <br />
-                <button className=' p-2 w-52 inline-flex mt-3 border-spacing-2 border-black bg-slate-300'>
+                <button onClick={handleGithub} className=' p-2 w-52 inline-flex mt-3 border-spacing-2 border-black bg-slate-300'>
                     <FaGithub className='text-black p-1 h-5 w-5 font-bold mt-1 me-1'></FaGithub>
                     Login with GitHub
                 </button> <br />
