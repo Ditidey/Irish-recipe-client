@@ -25,9 +25,9 @@ const router = createBrowserRouter([
                 
             },
             {
-                path: ':id',
+                path: '/chefs/:id',
                 element: <ChefDetails></ChefDetails>,
-                loader: ({param})=>fetch(`https://irish-recipe-assignment-server.vercel.app/chefs/${param.id}`)
+                loader: ({params})=>fetch(`https://irish-recipe-assignment-server.vercel.app/chefs/${params.id}`)
             },
             {
                 path: '/login',

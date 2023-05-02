@@ -8,11 +8,11 @@ const Footer = () => {
             <Marquee speed={100} className='text-white font-semibold text-2xl mb-5 mt-5'>
                 <p>It is the Irish Foods based website. There are information about great chefs and their famous recipes.</p>
             </Marquee>
-            <div className='flex justify-around'> 
+            <div className='md:flex md:justify-around'> 
             <p><FaGlassCheers className='text-green-400 w-20 h-20 mt-1 ms-6'></FaGlassCheers> 
             <span className='text-orange-400 font-bold text-3xl'>Irish Brunch</span></p>       
 
-            <div className='text-center space-y-5'>
+            <div className='text-center space-y-5 mb-3'>
                 <p className='text-white text-2xl'>Contact us</p>
                 <input type="text"   placeholder='Your message' className='p-2'/> <br />
                 <input type="email"   placeholder='Your email' className='p-2'/>
