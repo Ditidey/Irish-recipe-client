@@ -7,6 +7,7 @@ import Blog from "../components/pages/Blog";
 import ChefsSection from "../components/homeCom/ChefsSection";
 import ChefDetails from "../components/homeCom/ChefDetails";
 import ErrorPage from "../components/pages/ErrorPage";
+import ProtectedRoute from "./ProtectedRoute";
 
 
 const router = createBrowserRouter([
@@ -26,8 +27,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/chefs/:id',
-                element: <ChefDetails></ChefDetails>,
-                loader: ({params})=>fetch(`https://irish-recipe-assignment-server.vercel.app/chefs/${params.id}`)
+                element:  <ProtectedRoute><ChefDetails></ChefDetails></ProtectedRoute>,
+                loader: ({params})=>fetch(`https://irish-recipe-assignment-server-ditidey2017-gmailcom.vercel.app/chefs${params.id}`)
             },
             {
                 path: '/login',

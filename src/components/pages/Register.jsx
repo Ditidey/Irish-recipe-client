@@ -5,7 +5,7 @@ import { contextProvider } from '../../AuthProvider';
 
 const Register = () => {
     const [error, setError] = useState('');
-    const { registerUser, loginWithGit, loginWithGoogle } = useContext(contextProvider);
+    const { registerUser, loginWithGit, loginWithGoogle, updateUser } = useContext(contextProvider);
     const [success, setSuccess] = useState('');
 
     const handleRegister = (event) => {
@@ -13,7 +13,8 @@ const Register = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-
+        const name = form.name.value;
+        const photoURL = form.photo.value;
         if (password.length < 6) {
             setError('Must have 6 characters or more');
             return;
@@ -22,8 +23,15 @@ const Register = () => {
         registerUser(email, password)
             .then(result => {
                 const registeredUser = result.user;
-                console.log(registeredUser)
+                updateUser(name, photoURL)
+                .then(()=>{})
+                .catch(error=>{
+                    setError(error.message)
+                    console.log(error)
+                })
+                // console.log(registeredUser)
                 setError('')
+                
             })
             .catch(error => {
                 setError(error.message)
