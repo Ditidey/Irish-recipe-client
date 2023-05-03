@@ -28,7 +28,7 @@ const router = createBrowserRouter([
             {
                 path: '/chefs/:id',
                 element:  <ProtectedRoute><ChefDetails></ChefDetails></ProtectedRoute>,
-                loader: ({params})=>fetch(`https://irish-recipe-assignment-server-ditidey2017-gmailcom.vercel.app/chefs${params.id}`)
+                loader: ({params})=>fetch(`https://irish-recipe-assignment-server-ditidey2017-gmailcom.vercel.app/chefs/${params.id}`)
             },
             {
                 path: '/login',
