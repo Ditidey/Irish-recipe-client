@@ -7,7 +7,7 @@ import { ToastContainer } from 'react-toastify';
 
 const Home = () => {
     return (
-        <div className='  mb-10 '> 
+        <div className='mb-10 '> 
         <ToastContainer></ToastContainer>
             <Banner></Banner>
             <ChefsSection></ChefsSection>

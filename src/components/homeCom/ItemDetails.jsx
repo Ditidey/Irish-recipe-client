@@ -25,7 +25,7 @@ const ItemDetails = ({ item, favoriteToast }) => {
 
             <div className='flex justify-around my-4'>
                 <button onClick={favoriteToast} className='bg-orange-100 px-6 w-1/2 py-2 rounded-xl hover:bg-orange-200'>Favorite</button>
-                <p className='flex text-yellow-500 space-x-1'> <Rating style={{ maxWidth: 120 }} value={rating}></Rating>
+                <p className='flex text-yellow-500 space-x-1'> <Rating style={{ maxWidth: 100 }} value={rating}></Rating>
                     <span className='mt-2 font-semibold'>{rating}</span> </p>
             </div>
 

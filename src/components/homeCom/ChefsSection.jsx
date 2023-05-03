@@ -12,8 +12,8 @@ const ChefsSection = () => {
             .then(data => setChefs(data))
     }, [])
     return (
-        <div className='bg-slate-50 p-5 mt-20 '>
-            <p className='text-center mt-10 text-3xl font-bold shadow-sm'>Best Irish Chefs</p>
+        <div className='bg-slate-50 p-5 mt-20 sm:pt-20 '>
+            <p className='text-center mt-10 text-3xl font-bold shadow-sm mb-4'>Best Irish Chefs</p>
             <p className='text-center mt-2'>They have been working from a long time. They explored and experimented various recipes. <br /> They brought out delicious menu for branch and these are going so well in different places. You can choose one of them for your company/yourself.</p>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 my-4 mx-20 p-10'>
 

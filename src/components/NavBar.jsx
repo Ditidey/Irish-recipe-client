@@ -25,7 +25,7 @@ const NavBar = () => {
                         : <FaBars onClick={() => setOpen(!open)} className='lg:hidden'></FaBars>
                 }
 
-                <div className={`md:flex md:space-x-8 md:static mt-3 absolute duration-500 ${open === true ? 'top-14' : '-top-48'}`}>
+                <div className={`md:flex md:space-x-8 md:static mt-3  absolute duration-500 ${open === true ? 'top-14' : '-top-48'}`}>
                     <p>  <NavLink to='/' className={({ isActive }) => isActive ? 'text-red-800 font-bold' : ''}>Home</NavLink></p>
                     <p> <NavLink to='/blog' className={({ isActive }) => isActive ? 'text-red-800 font-bold' : ''}>Blog</NavLink></p>
                     <p> <NavLink   className={({ isActive }) => isActive ? 'text-black' : ''}>About Us</NavLink></p>

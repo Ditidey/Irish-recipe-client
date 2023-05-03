@@ -43,7 +43,7 @@ const recipes = [
 
 const Chart = () => {
     return (
-    <div className='hover:bg-orange-50 p-10 bg-slate-100'>
+    <div className='hover:bg-orange-50 md:p-10 p-3 bg-slate-100'>
         <p
             className='text-3xl text-center font-serif font-bold mt-5'>   Best Irish Recipes  
         </p>
@@ -59,7 +59,7 @@ const Chart = () => {
                 </ResponsiveContainer>
             </div>
 
-            <div className='my-10 sm:mx-36'>
+            <div className='my-10 sm:mx-36 sm:ps-10'>
                 <p className='text-2xl font-serif font-bold mt-2 mb-3'>Best Recipes:</p>
                 <ol className='space-y-2  '>
                     <li className='hover:text-blue-700 font-mono'>Irish Stew</li> <hr className='bg-black'/>

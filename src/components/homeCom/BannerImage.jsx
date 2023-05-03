@@ -10,8 +10,8 @@ const BannerImage = () => {
         .then(data =>  setRecipes(data))
     },[])
     return (
-        <div className='p-10 my-10 shadow-sm mx-10'  >
-            <p className='font-serif font-bold text-2xl text-center my-8 shadow-sm p-1'>Trending Now</p>
+        <div className='p-10 mt-2 mb-10 shadow-sm mx-10'  >
+            <p className='font-serif font-bold text-2xl text-center mb-8 mt-2 shadow-sm p-1'>Trending Now</p>
             <div className='grid sm:grid-cols-2 md:grid-cols-6 gap-5'>
                 {
                     recipes.map(recipe => <div key={recipe.id} className='p-6 '>

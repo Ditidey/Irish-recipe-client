@@ -70,8 +70,8 @@ const Register = () => {
         <div className='my-10'>
             <div className='w-2/5 shadow-2xl mx-auto p-10 ps-40 space-y-3 bg-orange-50'>
                 <p className='text-2xl font-bold'>Register with</p>
-                <p className='text-red-500'>{error}</p>
-                <p className='text-green-500'>{success}</p>
+                <p className='text-red-500 text-2xl font-semibold'>{error}</p>
+                <p className='text-green-500 text-2xl font-semibold'>{success}</p>
                 <form onSubmit={handleRegister}  >
                     <div>
                         <label htmlFor="name">Name</label> <br />

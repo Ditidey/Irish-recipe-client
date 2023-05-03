@@ -39,6 +39,7 @@ const Login = () => {
             .then(result => {
                 const gitUser = result.user
                 console.log(gitUser)
+                navigate(from, {replace: true})
                 setError('')
                 setSuccess('Login successful with Github!')
             })
@@ -52,6 +53,7 @@ const Login = () => {
         .then(result =>{
             const googleUser = result.user;
             console.log(googleUser)
+            navigate(from, {replace: true})
             setError('')
             setSuccess('Login with Google Successful')
         })
@@ -64,8 +66,8 @@ const Login = () => {
         <div className='my-10'>
             <div className='w-2/5 shadow-2xl mx-auto p-10 ps-40   bg-orange-50'>
                 <p className='text-2xl font-bold mb-6 ms-4'>Login with</p>
-                <p className='text-red-500'>{error}</p>
-                <p className='text-green-500'>{success}</p>
+                <p className='text-red-500 text-2xl font-semibold'>{error}</p>
+                <p className='text-green-500 text-2xl font-semibold'>{success}</p>
 
                 <form onSubmit={handleLogin}>
                     <div>
