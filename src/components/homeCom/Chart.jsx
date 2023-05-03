@@ -43,9 +43,9 @@ const recipes = [
 
 const Chart = () => {
     return (
-    <div className='bg-orange-100 p-10 hover:bg-slate-100'>
+    <div className='hover:bg-orange-50 p-10 bg-slate-100'>
         <p
-            className='text-3xl text-center font-serif font-bold mt-5'>   Best Recipes in Ireland
+            className='text-3xl text-center font-serif font-bold mt-5'>   Best Irish Recipes  
         </p>
 
         <div style={{ width: '100%', height: '100%' }} className='my-10 grid md:grid-cols-2 gap-5'>

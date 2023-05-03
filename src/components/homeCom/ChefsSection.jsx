@@ -11,15 +11,15 @@ const ChefsSection = () => {
             .then(data => setChefs(data))
     }, [])
     return (
-        <>
-            <p className='text-center mt-20 text-3xl font-bold'>Best Chefs in Ireland</p>
+        <div className='bg-slate-50 p-5 mt-20 '>
+            <p className='text-center mt-10 text-3xl font-bold shadow-sm'>Best Irish Chefs</p>
             <p className='text-center mt-2'>They have been working from a long time. They explored and experimented various recipes. <br /> They brought out delicious menu for branch and these are going so well in different places. You can choose one of them for your company/yourself.</p>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 my-4 mx-20 p-10'>
 
                 {
                     chefs.map(chef => <div key={chef.id}>
 
-                        <div className='p-4 ps-10 shadow-xl space-y-3 bg-green-50'>
+                        <div className='p-4 ps-10 shadow-xl space-y-3 bg-green-50 hover:bg-orange-50'>
                             <img src={chef.chef_image} alt="" className='w-64 h-40'/>
                             <p className='font-bold text-center text-lg'>{chef.chef_name}</p>
                             <div className='grid grid-cols-2 gap-2'> 
@@ -34,7 +34,7 @@ const ChefsSection = () => {
                     </div>)
                 }
             </div>
-        </>
+        </div>
     );
 };
 
