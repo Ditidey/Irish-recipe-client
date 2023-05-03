@@ -10,7 +10,7 @@ const BannerImage = () => {
         .then(data =>  setRecipes(data))
     },[])
     return (
-        <div className='p-10 my-10 shadow-sm '  >
+        <div className='p-10 my-10 shadow-sm mx-10'  >
             <p className='font-serif font-bold text-2xl text-center my-8 shadow-sm p-1'>Trending Now</p>
             <div className='grid sm:grid-cols-2 md:grid-cols-6 gap-5'>
                 {

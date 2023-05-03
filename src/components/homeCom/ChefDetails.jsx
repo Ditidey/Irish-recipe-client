@@ -2,10 +2,26 @@ import { Rating } from '@smastrom/react-rating';
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ItemDetails from './ItemDetails';
+import { ToastContainer, toast } from 'react-toastify';
 
 const ChefDetails = () => {
     const details = useLoaderData();
     const { id, chef_image, chef_name, num_recipes, years_experience, rating, likes, short_bio, recipes } = details;
+
+    const favoriteToast = () => {
+        toast("Wow!! 🦄Favorite Added", {
+
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: 1,
+            theme: "dark",
+        })
+    }
+
     return (
         <div>
             <div className='px-20 py-10 shadow-lg md:flex sm:mb-5' style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1614145121029-83a9f7b68bf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: "500px", }}>
@@ -25,10 +41,21 @@ const ChefDetails = () => {
                     </p>
                 </div>
             </div>
+            <ToastContainer position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark" >
 
+            </ToastContainer>
             <div className='mx-20 my-10 grid md:grid-cols-3 gap-5'>
                 {
-                    recipes.map(item=> <ItemDetails item={item}></ItemDetails>)
+                    recipes.map(item => <ItemDetails item={item} favoriteToast={favoriteToast}></ItemDetails>)
                 }
             </div>
         </div>

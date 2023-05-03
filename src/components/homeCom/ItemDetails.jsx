@@ -2,34 +2,25 @@ import { Rating } from '@smastrom/react-rating';
 import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
-const ItemDetails = ({ item }) => {
+const ItemDetails = ({ item, favoriteToast }) => {
     const { recipe_name, ingredients, cooking_method, rating } = item;
 
-    const favoriteToast = () => {
-        toast("Wow!! Favorite Added", {
-            icon: "🚀",
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-        })
-    }
+    // const favoriteToast = () => {
+    //     toast("Wow!! Favorite Added", {
+    //         icon: "🚀",
+    //         position: "top-right",
+    //         autoClose: 5000,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: true,
+    //         draggable: true,
+    //         progress: undefined,
+    //         theme: "light",
+    //     })
+    // }
     return (
         <div className='p-10 shadow-lg bg-slate-200'>
-            <ToastContainer position="top-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light"></ToastContainer>
+        
             <p className='text-2xl font-bold text-center my-4'>{recipe_name}</p>
 
             <div className='flex justify-around my-4'>

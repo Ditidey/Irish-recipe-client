@@ -3,10 +3,12 @@ import Banner from '../homeCom/Banner';
 import ChefsSection from '../homeCom/ChefsSection';
 import Chart from '../homeCom/Chart';
 import BannerImage from '../homeCom/BannerImage';
+import { ToastContainer } from 'react-toastify';
 
 const Home = () => {
     return (
-        <div className='md:mx-32 sm:mx-4 my-10 '> 
+        <div className='  mb-10 '> 
+        <ToastContainer></ToastContainer>
             <Banner></Banner>
             <ChefsSection></ChefsSection>
             <BannerImage></BannerImage>
