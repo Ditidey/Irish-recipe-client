@@ -8,11 +8,12 @@ import img4 from '../../../public/img/ima4.jfif'
 import img5 from '../../../public/img/ima5.jfif'
 const Banner = () => {
     return (
-        <div>
-            <section className='md:flex Md:justify-between shadow-2xl p-10 bg-orange-50'>
+        <div  className='p-10 shadow-lg opacity-90' style={{backgroundImage:'url("https://images.unsplash.com/photo-1487532195053-ae7d32261c6a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1138&q=80")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: "500px", }}>
+
+            <section className='md:flex Md:justify-between shadow-2xl p-10 pt-10'>
                 <div className="text-secondary p-6 md:w-1/2 space-y-4 bg-orange-100 rounded-md hover:bg-slate-50 me-10">
-                    <h3 className='text-2xl font-bold'>Irish Breakfast + Lunch</h3>
-                    <p className="mb-3 opacity-60">
+                    <h3 className='text-2xl font-bold font-serif'>Irish Breakfast + Lunch</h3>
+                    <p className="mb-3 opacity-60 text-black">
                         The Best Irish Brunch Recipes on Irish Brunch. Irish Eggs In A Well, Kefir And Cardamom Scones, Irish Soda Bread French Toast With Bailey's Irish Cream.traditional breakfast food, such as bacon, eggs, and toast or biscuits. Coffee and Donut Bar Serve a variety of coffee and donuts. Make sure you also have some nutritious options, like fruits and vegetables. Have a variety of fondue items with pots of melted chocolate, cheese, and oil.
                     </p>
                     <button
@@ -23,7 +24,7 @@ const Banner = () => {
                     </button>
                 </div>
 
-                <div className='md:w-1/2 py-10 ps-10 hover:bg-slate-50'>
+                <div className='md:w-1/2 rounded-md py-10 ps-10 hover:bg-slate-50 bg-orange-50'>
                     <CarouselProvider naturalSlideHeight={120} naturalSlideWidth={280} totalSlides={5}  >
                         <Slider  >
                             <Slide index={0}><img src={img1} className='shadow-xl rounded-sm'></img>
@@ -42,8 +43,8 @@ const Banner = () => {
                             </Slide>
                         </Slider>
 
-                        <ButtonBack className=' me-2 ms-14 hover:text-blue-500'>Back</ButtonBack>
-                        <ButtonNext className='hover:text-blue-500'>Next</ButtonNext>
+                        <ButtonBack className=' me-2 ms-14 hover:text-blue-500 bg-orange-300 py-1 px-3 rounded-md'>Back</ButtonBack>
+                        <ButtonNext className='hover:text-blue-500 bg-green-300 py-1 px-3 rounded-md'>Next</ButtonNext>
                     </CarouselProvider>
                 </div>
             </section>
