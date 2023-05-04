@@ -15,7 +15,7 @@ const NavBar = () => {
     }
     return (
         <>
-            <nav className='flex justify-between mx-20'>
+            <nav className='flex justify-between sm:mx-5 md:mx-20'>
                 <p className='inline-flex font-bold text-3xl'>
                     <FaGlassCheers className='text-green-600 mt-1 me-2 hover:animate-spin'></FaGlassCheers>
                     <span className='text-orange-600'>Irish </span>
