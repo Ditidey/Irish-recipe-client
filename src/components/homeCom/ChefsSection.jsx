@@ -1,18 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';
 import { FaHeart } from 'react-icons/fa';
 import { Rating } from '@smastrom/react-rating';
+import { contextProvider } from '../../AuthProvider';
 
 const ChefsSection = () => {
-    // const chefs = useLoaderData();
-    // console.log(chefs)
+     const {loading} = useContext(contextProvider);
+
     const [chefs, setChefs] = useState([])
     useEffect(() => {
         fetch('https://irish-recipe-assignment-server-ditidey2017-gmailcom.vercel.app/chefs')
             .then(res => res.json())
             .then(data => setChefs(data))
     }, [])
+
+    if(loading){
+        return <div className='w-20 h-20 rounded-full animate-pulse bg-green-100 text-center'>
+            <p className='animate-spin w-10 h-10 rounded-full'>__....__</p>
+            <p className='text-orange-700 '>Loading..</p>
+        </div>
+    }
     return (
         <div className='bg-slate-50 p-5 mt-20 sm:pt-20 '>
             <p className='text-center mt-10 text-3xl font-bold shadow-sm mb-4'>Best Irish Chefs</p>
