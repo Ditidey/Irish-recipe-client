@@ -31,7 +31,7 @@ const Register = () => {
                 })
                 // console.log(registeredUser)
                 setError('')
-                navigate('/login')
+                navigate('/')
                 form.reset();
             })
             .catch(error => {
