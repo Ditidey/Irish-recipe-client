@@ -60,7 +60,7 @@ const Chart = () => {
                 </div>
 
                 <div className='my-10 sm:mx-36 sm:ps-10'>
-                    <p className='text-2xl font-serif font-bold mt-2 mb-3'>Best Recipes:</p>
+                    <p className='text-2xl font-serif font-bold mt-2 mb-3'>Best Recipes in 2023:</p>
                     <ol className='space-y-2  '>
                         <li className='hover:text-blue-700 font-mono'>Irish Stew</li> <hr className='bg-black' />
                         <li className='hover:text-blue-700 font-mono'>Boxty</li> <hr />
