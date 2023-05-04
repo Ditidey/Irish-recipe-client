@@ -23,7 +23,7 @@ const ChefsSection = () => {
                     chefs.map(chef => <div key={chef.id}>
 
                         <div className='p-4 ps-10 shadow-xl space-y-3 bg-green-50 hover:bg-orange-50'>
-                            <LazyLoad height={250} offset={300}  threshold={0.95}>
+                            <LazyLoad height={250} offset={300} threshold={0.95}>
                             <img src={chef.chef_image} alt="" className='w-64 h-56 rounded-md' />
                             </LazyLoad>
                              

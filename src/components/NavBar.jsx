@@ -1,6 +1,6 @@
 import { Tooltip } from '@material-tailwind/react';
 import React, { useContext, useState } from 'react';
-import { FaBars, FaClosedCaptioning, FaGlassCheers, FaGlassWhiskey, FaTimes, FaUserCircle } from "react-icons/fa";
+import { FaBars, FaClosedCaptioning, FaGlassCheers, FaTimes, FaUserCircle } from "react-icons/fa";
 import { Link, NavLink } from 'react-router-dom';
 import { contextProvider } from '../AuthProvider';
 const NavBar = () => {
@@ -18,7 +18,8 @@ const NavBar = () => {
             <nav className='flex justify-between mx-20'>
                 <p className='inline-flex font-bold text-3xl'>
                     <FaGlassCheers className='text-green-600 mt-1 me-2 hover:animate-spin'></FaGlassCheers>
-                    <span className='text-orange-600'>Irish </span> <span className='text-green-700'> Brunch</span>
+                    <span className='text-orange-600'>Irish </span>
+                     <span className='text-green-700'> Brunch</span>
                 </p>
                 {
                     open ? <FaTimes onClick={() => setOpen(!open)} className='lg:hidden'></FaTimes>

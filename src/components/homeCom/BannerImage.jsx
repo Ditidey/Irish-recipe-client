@@ -9,6 +9,8 @@ const BannerImage = () => {
         .then(res => res.json())
         .then(data =>  setRecipes(data))
     },[])
+
+    // trending new section
     return (
         <div className='p-10 mt-2 mb-10 shadow-sm mx-10'  >
             <p className='font-serif font-bold text-2xl text-center mb-8 mt-2 shadow-sm p-1'>Trending Now</p>

@@ -44,20 +44,7 @@ const router = createBrowserRouter([
             }
         ]
     },
-    // {
-        
-    //         path: '/chefs',
-    //         element: <ChefsSection></ChefsSection>,
-    //          children: [
-    //             {
-    //                 path: ':id',
-    //                 element: <ChefDetails></ChefDetails>,
-    //                 loader: ({param})=>fetch(`https://irish-recipe-assignment-server.vercel.app/chefs/${param}`)
-    //             },
-    //          ]
-         
-         
-    // }
+   
 ])
 
 

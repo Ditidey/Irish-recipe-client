@@ -6,11 +6,13 @@ import img2 from '../../../public/img/ima2.jfif';
 import img3 from '../../../public/img/ima3.jfif';
 import img4 from '../../../public/img/ima4.jfif';
 import img5 from '../../../public/img/ima5.jfif';
+
 const Banner = () => {
     return (
-        <div  className='p-10 shadow-lg opacity-90 md:mb-0 sm:mb-52' style={{backgroundImage:'url("https://images.unsplash.com/photo-1487532195053-ae7d32261c6a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1138&q=80")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',   }}>
-
+        <div className='p-10 shadow-lg opacity-90 md:mb-0 sm:mb-52' style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1487532195053-ae7d32261c6a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1138&q=80")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', }}>
+            
             <section className='md:flex Md:justify-between shadow-2xl md:p-10 pt-10 mx-10'>
+                 {/* left site code */}
                 <div className="text-secondary p-6 md:ps-10 md:w-1/2 space-y-4 bg-orange-100 rounded-md hover:bg-slate-50 me-10">
                     <h3 className='text-2xl font-bold font-serif'>Irish Breakfast + Lunch</h3>
                     <p className="mb-3 opacity-60 text-black">
@@ -24,6 +26,7 @@ const Banner = () => {
                     </button>
                 </div>
 
+                  {/* right side code */}
                 <div className='md:w-1/2 rounded-md md:py-10 py-5 my-2 ps-10 hover:bg-slate-50 bg-orange-50'>
                     <CarouselProvider naturalSlideHeight={120} naturalSlideWidth={250} totalSlides={5}  >
                         <Slider  >
