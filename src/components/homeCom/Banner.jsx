@@ -30,18 +30,18 @@ const Banner = () => {
                 <div className='md:w-1/2 rounded-md md:py-10 py-5 my-2 ps-10 hover:bg-slate-50 bg-orange-50'>
                     <CarouselProvider naturalSlideHeight={120} naturalSlideWidth={250} totalSlides={5}  >
                         <Slider  >
-                            <Slide index={0}><img src={img1} className='shadow-xl rounded-sm w-2/3'></img>
+                            <Slide index={0}><img src={img1} className='shadow-xl rounded-sm w-2/3 h-2/3'></img>
                                 <p className='mt-2 ms-5 '>Irish Breakfast shot</p></Slide>
-                            <Slide index={1}><img src={img2} className='shadow-xl rounded-sm'></img>
+                            <Slide index={1}><img src={img2} className='shadow-xl rounded-sm w-2/3 h-2/3'></img>
                                 <p className='mt-2 ms-5'>Irish Lunch Bum</p>
                             </Slide>
-                            <Slide index={2}><img src={img3} className='shadow-xl rounded-sm'></img>
+                            <Slide index={2}><img src={img3} className='shadow-xl rounded-sm w-2/3 h-2/3'></img>
                                 <p className='mt-2 ms-5'>Irish Brunch Hub</p>
                             </Slide>
-                            <Slide index={2}><img src={img4} className='shadow-xl rounded-sm'></img>
+                            <Slide index={2}><img src={img4} className='shadow-xl rounded-sm w-2/3 h-2/3'></img>
                                 <p className='mt-2 ms-5'>Irish Brunch Hub</p>
                             </Slide>
-                            <Slide index={2}><img src={img5} className='shadow-xl rounded-sm'></img>
+                            <Slide index={2}><img src={img5} className='shadow-xl rounded-sm w-2/3 h-2/3'></img>
                                 <p className='mt-2 ms-5'>Irish Brunch Hub</p>
                             </Slide>
                         </Slider>
