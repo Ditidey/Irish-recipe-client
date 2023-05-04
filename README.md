@@ -1,4 +1,4 @@
-* ## Live site: https://irish-recipe-assignment.web.app/
+ ## Live site: https://irish-recipe-assignment.web.app/
 
 * ### This is an Irish food based website. There are best chefs and popular recipes.
 * ### It is build by React, tailWind, react-awesome packages, react icons, rechart, marquee, react-router hooks.
