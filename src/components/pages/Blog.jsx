@@ -1,6 +1,7 @@
 import React from 'react';
 import Pdf from 'react-to-pdf';
 import { useRef } from 'react';
+import { FaArrowDown, FaFileDownload } from 'react-icons/fa';
 
 
 const Blog = () => {
@@ -10,8 +11,8 @@ const Blog = () => {
         <div className='md:mx-44 mx-8 my-20 '>
             <Pdf targetRef={ref} filename="document.pdf">
 				{({ toPdf }) => (
-					<button onClick={toPdf} className="bg-orange-300 p-3 rounded-sm my-5 hover:bg-orange-700 ms-2">
-						Generate PDF
+					<button onClick={toPdf} className="flex bg-orange-300 p-3 rounded-sm my-5 hover:bg-orange-700 ms-2">
+					<FaFileDownload className='me-1 w-3 mt-1'></FaFileDownload>	Generate PDF
 					</button>
 				)}
 			</Pdf>

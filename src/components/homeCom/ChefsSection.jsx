@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';
+import { FaHeart } from 'react-icons/fa';
+import { Rating } from '@smastrom/react-rating';
 
 const ChefsSection = () => {
     // const chefs = useLoaderData();
@@ -29,8 +31,8 @@ const ChefsSection = () => {
                             <div className='grid grid-cols-2 gap-2'>
                                 <p className='bg-white p-1 text-center rounded-md'>{chef.years_experience} year of experiences</p>
                                 <p className='bg-white p-1 text-center rounded-md'> {chef.num_recipes} recipes</p>
-                                <p className='bg-white p-1 text-center rounded-md'> {chef.likes} likes</p>
-                                <p className='bg-white p-1 text-center rounded-md'> {chef.rating} ratings</p>
+                                <p className='bg-white p-1 text-center rounded-md flex'><FaHeart className='text-red-400 me-1 mt-1 h-4 ms-2 w-4'></FaHeart> {chef.likes} likes</p>
+                                <p className='bg-white p-1 text-center rounded-md flex'><Rating style={{ maxWidth: 100 }} value={chef.rating}> </Rating> {chef.rating}</p>
                             </div>
                             <Link to={`/chefs/${chef.id}`}>  <button className='bg-orange-300 w-full p-2 mt-4 rounded-lg hover:bg-orange-600'>View Recipes Details</button>
                             </Link>

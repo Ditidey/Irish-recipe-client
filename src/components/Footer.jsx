@@ -1,6 +1,6 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
-import { FaFacebook, FaGlassCheers, FaInstagram, FaTwitter, FaYoutubeSquare } from 'react-icons/fa';
+import { FaFacebook, FaGlassCheers, FaInstagram, FaRegPaperPlane, FaSms, FaTwitter, FaYoutubeSquare } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -35,7 +35,8 @@ const Footer = () => {
                         <FaYoutubeSquare className='text-white me-3 h-4 w-5'></FaYoutubeSquare>
                     </p>
                     <p className='text-lg font-bold text-white '>Message Us</p>
-                    <button className='bg-orange-100 mt-2 py-2 p-6 font-bold hover:bg-orange-200'>Live Chat</button>
+                    <button className='bg-orange-100 mt-2 py-2 p-6 font-bold hover:bg-orange-200 flex'>Live Chat 
+                    <FaSms className='mt-1 ms-1 w-4 text-blue-600'></FaSms></button>
                 </div>
 
             </div>
