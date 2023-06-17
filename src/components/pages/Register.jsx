@@ -7,7 +7,7 @@ const Register = () => {
     const { registerUser, updateUser } = useContext(contextProvider);
     const [success, setSuccess] = useState('');
     const navigate = useNavigate();
-
+// register page
     const handleRegister = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -30,7 +30,7 @@ const Register = () => {
                     console.log(error)
                 })
                 // console.log(registeredUser)
-                setError('')
+            
                 navigate('/')
                 form.reset();
             })
